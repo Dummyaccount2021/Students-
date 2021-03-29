@@ -6,30 +6,17 @@ namespace Students
 {
     class Classroom
     {
-        CurryStudent curryStudent = new CurryStudent();
+        CurryStudent cs = new CurryStudent();
         IO io = new IO();
 
-        private Student _student;
+        CurryStudent[] css = new CurryStudent[2];
         public Classroom()
         {
+           
+
 
         }
 
-        public void setFirstName()
-        {
-            string name = io.inputData("what is the student's first name?");
-
-            curryStudent.setfName(name);
-        }
-
-        public string displaysomething(string temp)
-        {
-            return "";
-        }
-
-        public string displaysomething(int temp)
-        {
-            return "";
-        }
+      
     }
 }

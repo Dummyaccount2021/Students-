@@ -7,7 +7,6 @@ namespace Students
     class CurryStudent : Student //inheritance
     {
 
-        private string _id;
         private string _major;
         private string _housingStatus;
         public CurryStudent()

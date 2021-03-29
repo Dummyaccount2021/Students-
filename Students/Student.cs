@@ -30,15 +30,15 @@ namespace Students
 
         }
 
-        public string setfName(string name)
+        public bool setFirstName(string name)
         {
             _firstName = name;
 
-            return _firstName;
+            return true;
            
         }
 
-        public string getFName()
+        public string getFirstName()
         {
             return _firstName;
         }
@@ -55,18 +55,44 @@ namespace Students
         {
             return _lastName;
         }
-        public void setAge(string age)
+
+        public bool setFavoriteNumber(string number)
         {
-            try
+            if (int.TryParse(number, out int temp))
             {
-                int.Parse(age);
+                _favNumber = temp;
+                return true;
             }
-            catch
-            {
-                Console.WriteLine(age + " is an invalid input");
-            }
+            else
+                return false;
+
+          
+        }
+        public string getFavoriteNumber()
+        {
+            return _favNumber.ToString();
         }
 
+        public bool setGender(string gender)
+        {
+            if (gender.Length > 1)
+            {
+                return false;
+            }
+            else if (gender.Equals("m") || gender.Equals("M"))
+            {
+                _gender = gender[0];
+                return true;
+            }
+            else if (gender.Equals("f") || gender.Equals("F"))
+            {
+                _gender = gender[0];
+                return true;
+            }
+            else
+                return false;
+        }
+      
         public virtual bool setId(string id)
         {
             //@00984834
