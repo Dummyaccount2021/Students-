@@ -20,14 +20,17 @@ namespace Students
             //constructor
         }
         
-        public Student(string _firstName, string _lastName)
+        public Student(string firstName, string lastName)
         {
-
+            _firstName = firstName;
+            _lastName = lastName;
         }
 
-        public Student(string _firstName, string _lastName, string _id)
+        public Student(string firstName, string lastName, string id)
         {
-
+            _firstName = firstName;
+            _lastName = lastName;
+            _id = id;
         }
 
         public bool setFirstName(string name)
