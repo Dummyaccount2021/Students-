@@ -8,10 +8,11 @@ namespace Students
     {
         IO io = new IO();
 
-        CurryStudent [] csa = new CurryStudent[2];
-        DanceStudent [] dance = new DanceStudent[2];
-        JudoStudent [] judo = new JudoStudent[2];
-        NuseryStudent[] nurse = new NuseryStudent[2];
+        private CurryStudent[] csa;
+        private DanceStudent[] dance;
+        private JudoStudent[] judo;
+        private NuseryStudent[] nurse;
+        private Student[] stu;
         public Classroom()
         {
             for (int a = 0; a < csa.Length; a++)
@@ -24,6 +25,27 @@ namespace Students
             }
         }
 
-      
+        public bool setStudentFName(Student stu)
+        {
+            if (stu.setFirstName(io.inputData("what is the student's first name?")))
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public bool setStudentLName(Student stu)
+        {
+            if (stu.setLastName(io.inputData("what is the student's last name?")))
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
+
+
     }
 }

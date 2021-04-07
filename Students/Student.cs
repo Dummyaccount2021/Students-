@@ -47,11 +47,11 @@ namespace Students
         }
 
 
-        public string setLastName(string name)
+        public bool setLastName(string name)
         {
             _lastName = name;
 
-            return _lastName;
+            return true;
         }
 
         public string getLastName()
